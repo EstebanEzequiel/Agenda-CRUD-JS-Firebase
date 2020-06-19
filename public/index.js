@@ -30,7 +30,7 @@ window.addEventListener('DOMContentLoaded', async (e) => {
             task.id = doc.id; // ID de cada tarea en la base de datos
 
             taskContainer.innerHTML += `<div class="card card-body mt-3 border-secondary p-0">
-            <img src="/1.jpg" class="card-img">
+            <img src="1.jpg" class="card-img">
             <div id="titulo">
             <h4 class="text-center text-capitalize">${task.title}</h4>
             </div>
