@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>agenda</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/darkly/bootstrap.min.css">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body class="bg-secondary">
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-md-5"> <!-- offset-md-4 -->
+                <div class="card mb-2">
+                    <h3 class="text-white-50 text-center font-weight-bold">AGENDA</h3>
+                </div>
+                <div class="card">
+                    <div class="card-body py-4">
+                        <form id="task-form">
+                            <div class="form-group">
+                                <input type="text" id="task-title" class="form-control" placeholder="tarea" autofocus>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="task-description" rows="5" class="form-control" placeholder="descripcion"></textarea>
+                            </div>
+                            <button class="btn btn-primary float-right" id="btn-task-form">Guardar</button>
+                        </form>
+                    </div>
+                </div>
+                <br>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-5">
+                <div id="tasks-container"></div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+    
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestore.js"></script>
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyA192GrPIZMqKeVTZgxiZIrhvyEwv56pfo",
+        authDomain: "agenda-crud-app.firebaseapp.com",
+        databaseURL: "https://agenda-crud-app.firebaseio.com",
+        projectId: "agenda-crud-app",
+        storageBucket: "agenda-crud-app.appspot.com",
+        messagingSenderId: "756989275709",
+        appId: "1:756989275709:web:1448fa46efbc15fb4c8454"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="index.js"></script>
+</body>
+</html>
