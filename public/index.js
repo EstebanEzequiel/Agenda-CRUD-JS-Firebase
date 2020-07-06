@@ -29,17 +29,16 @@ window.addEventListener('DOMContentLoaded', async (e) => {
             const task = doc.data();
             task.id = doc.id; // ID de cada tarea en la base de datos
 
-            taskContainer.innerHTML += `<div class="card card-body mt-3 border-secondary p-0">
+            taskContainer.innerHTML += `<div class="card card-body border-secondary p-0">
             <img src="1.jpg" class="card-img">
             <div id="titulo">
             <h4 class="text-center text-capitalize">${task.title}</h4>
             </div>
             <p class="py-3 px-3 m-0">${task.description}</p>
-            <br>
-                <div class="d-flex justify-content-around pb-3">
-                    <button class="btn btn-primary btn-delete" data-id="${task.id}">Borrar</button>
-                    <button class="btn btn-secondary btn-edit" data-id="${task.id}">Editar</button>
-                </div>
+            <div class="card-footer bg-dark">
+                <button class="btn btn-primary btn-delete" data-id="${task.id}">Borrar</button>
+                <button class="btn btn-secondary btn-edit" data-id="${task.id}">Editar</button>
+            </div>
             </div>`;
 
             const btnDelete = document.querySelectorAll('.btn-delete');
