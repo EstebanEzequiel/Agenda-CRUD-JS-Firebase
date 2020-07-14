@@ -3,32 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>agenda</title>
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilos.css">
+    <title>agenda</title>
 </head>
-<body class="bg-secondary">
-    <br>
-    <div class="container">
-        <h3 class="text-white-50 text-center font-weight-bold">AGENDADOR</h3>
-        <div class="card" id="formulario">
-            <div class="card-body py-4">
-                <form id="task-form">
-                    <div class="form-group">
-                        <input type="text" id="task-title" class="form-control" placeholder="tarea" autofocus>
+<body>
+    <div class="encabezado">
+        <h1 class="display-1 text-center text-white-50 text-capitalize">annotations</h1>    
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-5">
+                <div class="card1">
+                    <div class="card-body">
+                        <form id="task-form">
+                            <div class="form-group">
+                                <input type="text" id="task-title" class="form-control" placeholder="día/mes" autofocus>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="task-description" rows="8" class="form-control" placeholder="descripcion de evento"></textarea>
+                            </div>
+                            <button class="btn btn-dark btn-sm float-right" id="btn-task-form">Guardar</button>
+                        </form>
                     </div>
-                    <div class="form-group">
-                        <textarea id="task-description" rows="5" class="form-control" placeholder="descripcion"></textarea>
-                    </div>
-                    <button class="btn btn-primary float-right" id="btn-task-form">Guardar</button>
-                </form>
+                </div>
+                <br>
             </div>
-        </div>
-        <br><br>
+            <div class="col-sm-7" style="overflow: scroll; height: 70vh; overflow-x: hidden;">
+                <div id="tasks-container"></div>
+            </div>
+        </div>        
     </div>
-    <div class="contenedor">
-        <div id="tasks-container"></div>
-    </div>
+
+    <!-- ------------------------------------------------------------------------------- -->
     
         <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
