@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "agenda-crud-app"
+    "default": "agenda-crud-app",
+    "agenda": "agenda-crud-app"
   }
 }
